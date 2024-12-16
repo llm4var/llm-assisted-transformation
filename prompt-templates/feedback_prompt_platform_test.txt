@@ -1,0 +1,32 @@
+You need to fix a variable C source-code file, which uses conditional compilation, so that the unit tests can successfully pass on it.
+Our goal is to ensure that the variable source-code file has the correct functionality.
+   
+Context: 
+Source code file is written in C. 
+A unit-test named `{{replace with failed test name}}` fails when building the `{{replace with variant for which error occurs}}` variant.
+
+Instructions:
+Below are the instructions you need to follow.
+1. Suggest changes to only the C source-code file and please provide the complete file in the output.
+
+Inputs: 
+Consider the below variable source-code file which uses conditional compilation directives to derive different variants out of a single file.
+
+```c
+{{replace with source-code file causing test error}}
+
+```
+
+When the following unit test is run on the above file for variant `{{replace with variant for which error occurs}}`, test `{{replace with failed test name}}` fails with the following log.
+
+```c++
+{{replace with test file with error}}
+
+```
+
+Here is the log of the unit test
+
+```bash
+{{replace with failed test execution log}}
+
+```

@@ -1,0 +1,27 @@
+You need to fix a CMakeLists.txt file, which was created using conditional statements from the CMakeLists.txt files of a set of cloned variants, so that it can be successfully built.
+Our goal is to ensure that the variable source-code file can actually be compiled without any errors. 
+   
+Context: 
+Source code file is written in C. 
+Error occurs when building the {{replace with variant name which error occurs}} variant.
+Unit tests for each variant are located in the relative path - `test_temp/{variant_name}/{unit_test}.cpp`.
+
+Instructions:
+Below are the instructions you need to follow.
+1. Make sure that each variant executable has access to only the following files during its compilation.
+{{replace with variable file info content}}
+2. `main.c` file should be excluded from test executables as shown in the CMakeLists of input variants. 
+3. Naming of all executables and targets should be consistent with `{Variant_name}` command-line argument.
+
+Input:
+Below is the input CMakeLists.txt file which needs to be fixed.
+```cmake
+{{replace with llm-create CMakeLists}}
+
+```
+
+Below is the error that occurs when building the above file. 
+```bash
+{{replace with error msg encountered during build}}
+
+```

@@ -1,0 +1,9 @@
+# Binary output dir, not recommended to push binary results to Git.
+/build
+
+# Output directory of test results
+/test/output
+
+# Generated IDE project files
+.idea
+.vscode
