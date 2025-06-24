@@ -1,11 +1,9 @@
-You need to act as a migrator for CMakeLists.txt files of cloned variants by generating a single CMakeLists.txt file which can be used to build a SPL constructed from these cloned variants.
+Goal and Role
+You need to act as a migrator for CMakeLists.txt files of cloned variants by generating a single CMakeLists.txt file which can be used to build an SPL constructed from these cloned variants.
 Our goal is to build the already available SPL generated from these cloned variants using the CMakeLists.txt file which you will generate. 
 
 Context:
-The already available SPL is present in the "spl_output" directory.
-CMakeLists.txt file which you generate will be stored at the root level of this spl_output directory.
-Cloned variants are called: blinking_light, color_light, color_light_green and dimmable_light.
-Unit tests for each variant are located in the relative path - `test_temp/{variant_name}/{unit_test}.cpp`.
+Cloned variants are called: {variant_name_list}. The code is written in {programming_language}. 
 
 Instructions:
 Below are the instructions you need to follow.
@@ -19,9 +17,8 @@ Below are the instructions you need to follow.
 7. Generated CMakeLists.txt file should accept an argument from the command-line.
 8. This argument from the command-line should be called Variant_name.
 9. This argument should accept only the possible variant names specified above as inputs. 
-10. The upper-case version of this argument should be made available to all the files using `add_compile_definitions({Variant_name})` where `{Variant_name}` could be the uppercase version of BLINKING_LIGHT, COLOR_LIGHT, COLOR_LIGHT_GREEN and DIMMABLE_LIGHT.
-11. Generated CMakeLists.txt file should compile all the executables listed in the input CMake files.
-12. `main.c` file should be excluded from test executables as shown in the CMakeLists of input variants. 
+10. Generated CMakeLists.txt file should compile all the executables listed in the input CMake files.
+11. `main.c` file should be excluded from test executables as shown in the CMakeLists of input variants. 
 
 Example:
 Below is an example showing how the build file for spl can be generated using the build files from each variant. 
